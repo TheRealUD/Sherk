@@ -46,8 +46,20 @@ border-collapse: collapse}
 body {
 	background-image:url("../images/swamp.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 130%;
+	 background-attachment: fixed;
+	background-size: 100% 100%;
 }
-.cisc {
-	foreground-color:red; width:200px; border:2px solid red;
+.RISC{
+	color: blue;
+	width: 425px;
+	border:1px solid blue;
+	margin-left: 3px;
+
+}
+
+.CISC{
+	color: red;
+	border: 1px solid red;
+	width: 425px;
+	margin-right: 150x;
 }
