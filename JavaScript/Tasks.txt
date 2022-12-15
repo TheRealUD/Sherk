@@ -1,0 +1,7 @@
+Try the following:
+
+Add another text field to the form to take the user’s examination number.
+Extend the Javascript code to validate this field to make sure that it is not left blank.
+Extend the Javascript code to make sure that the user’s examination number is exactly 4 digits.
+Add a set of radio buttons to the form to accept a level of entry such as GCSE, AS or A2.
+Write a function that displays the level of entry to the user in an alert box so that the level can be confirmed or rejected.

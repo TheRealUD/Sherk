@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Exam entry</title>
+<script language="javascript" type="text/javascript">
+
+function validateForm() {
+	var result = true;
+	var msg="";
+	
+	if (document.ExamEntry.name.value=="") {
+		msg+="You must enter your name \n";
+		document.ExamEntry.name.focus();
+		document.getElementById('name').style.color="red";
+		result = false;
+	}
+	
+	if (document.ExamEntry.subject.value=="") {
+		msg+="You must enter the subject \n";
+		document.ExamEntry.subject.focus();
+		document.getElementById('subject').style.color="red";
+		result = false;
+	}
+	
+	if (document.ExamEntry.examinationnumber.value=="") {
+		msg+="You must enter your examination number \n";
+		document.ExamEntry.examinationnumber.focus();
+		document.getElementById('examinationnumber').style.color="red";
+		result = false;
+	}
+	var length = document.ExamEntry.examinationnumber.value.length;
+	console.log(length);
+	if (length!="4") {
+		msg+="Your examination number must be 4 numbers \n";
+		document.ExamEntry.examinationnumber.focus();
+		document.getElementById('examinationnumber').style.color="red";
+		result = false;
+	}
+	
+	if(msg==""){
+		return result;
+	}
+	
+	{
+		alert(msg)
+	return result;
+	}
+}
+
+</script>
+</head>
+<body>
+<h1>Exam Entry Form</h1>
+<form name="ExamEntry" method="post" action="success.html">
+<table width="50%" border="0">
+<tr>
+<td id="name">Name</td>
+<td><input type="text" name="name"/></td>
+</tr>
+<tr>
+<td id="subject">Subject</td>
+<td><input type="text" name="subject"/></td>
+</tr>
+<tr>
+<td id="examinationnumber">examination number</td>
+<td><input type="text" name="examinationnumber"/></td>
+</tr>
+
+<tr>
+<td><input type="submit" name="Submit" value="Submit" onclick="return validateForm();"/></td>
+<td><input type="reset" name="Reset" value="Reset"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
